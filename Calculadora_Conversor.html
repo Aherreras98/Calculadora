@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Conversora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Calculadora Conversora</h1>
+        <input type="text" id="pantalla" readonly>
+        
+        <div class="botones">
+            <button onclick="agregarNumero('7')" disabled>7</button>
+            <button onclick="agregarNumero('8')" disabled>8</button>
+            <button onclick="agregarNumero('9')" disabled>9</button>
+            <button onclick="agregarOperacion('/')" disabled>÷</button>
+            
+            <button onclick="agregarNumero('4')" disabled>4</button>
+            <button onclick="agregarNumero('5')" disabled>5</button>
+            <button onclick="agregarNumero('6')" disabled>6</button>
+            <button onclick="agregarOperacion('*')" disabled>×</button>
+            
+            <button onclick="agregarNumero('1')" disabled>1</button>
+            <button onclick="agregarNumero('2')" disabled>2</button>
+            <button onclick="agregarNumero('3')" disabled>3</button>
+            <button onclick="agregarOperacion('-')" disabled>-</button>
+            
+            <button onclick="borrarUltimo()" disabled>C</button>
+            <button onclick="agregarNumero('0')" disabled>0</button>
+            <button onclick="agregarDecimal()" disabled>,</button>
+            <button onclick="agregarOperacion('+')" disabled>+</button>
+            
+            <button onclick="borrarTodo()" disabled>CE</button>
+            <button onclick="encender()" id="botonEncender">ON</button>
+            <button onclick="apagar()" id="botonApagar" disabled>OFF</button>
+            <button onclick="calcular()" disabled>=</button>
+        </div>
+
+        <select id="moneda" onchange="actualizarHistorial()">
+            <option value="€">Euro (€)</option>
+            <option value="$">Dólar ($)</option>
+            <option value="JPY">Yen (¥)</option>
+            <option value="Pesos">Peso Mexicano</option>
+        </select>
+
+        <div class="historial">
+            <h3>Historial y Conversiones</h3>
+            <div id="historial"></div>
+        </div>
+
+        <div class="pie">
+            Adrián Herrera - DAW1A
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

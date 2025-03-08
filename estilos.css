@@ -1,0 +1,126 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #1a1a1a; 
+}
+
+.contenedor {
+    background: #2d2d2d; 
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 340px;
+    border: 1px solid #404040;
+}
+
+h1 {
+    color: #ffffff; 
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#pantalla {
+    width: calc(100% - 30px);
+    height: 80px;
+    margin: 0 0 20px 0;
+    font-size: 36px;
+    text-align: right;
+    padding: 15px;
+    background: #363636; 
+    border: 2px solid #404040; 
+    border-radius: 12px;
+    color: #ffffff; 
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    padding: 18px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+
+button:not([onclick*="Operacion"]) {
+    background: #4a5568; 
+}
+
+button[onclick*="'/')"] { background: #f6ad55; color: #2d3436; } 
+button[onclick*="'*')"] { background: #9f7aea; } 
+button[onclick*="'-')"] { background: #e53e3e; } 
+button[onclick*="'+')"] { background: #4299e1; } 
+button[onclick="calcular()"] { background: #38b2ac; } 
+
+button[onclick="borrarUltimo()"],
+button[onclick="borrarTodo()"] {
+    background: #ff6b6b; 
+    color: #2d3436;
+}
+
+button[onclick="agregarDecimal()"] { background: #718096; } 
+#botonEncender { background: #48bb78; } 
+button[onclick="apagar()"] { background: #c53030; } 
+
+button:hover:not(:disabled) {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.historial {
+    margin-top: 25px;
+    padding: 15px;
+    background: #363636; 
+    border-radius: 12px;
+    color: #ffffff;
+    border: 1px solid #404040; 
+}
+
+select {
+    margin: 15px 0;
+    padding: 8px 12px;
+    background: #363636; 
+    border: 2px solid #404040; 
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff; 
+    width: 100%;
+}
+
+.pie {
+    color: #ffffff; 
+    text-align: center;
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 12px;
+    opacity: 0.8;
+    border-top: 1px solid #404040; 
+}
